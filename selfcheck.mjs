@@ -3,7 +3,7 @@
  * ---------------------------------------------------------------------------
  * 用法（Windows）：
  *   $env:ELECTRON_RUN_AS_NODE='1'
- *   & "<DSH 安装目录>\\DSH Desktop.exe" "D:\\plugins\\plugins\dsh-bili-toy\selfcheck.mjs"
+ *   & "<DSH 安装目录>\DSH Desktop.exe" "D:\plugins\plugins\dsh-bili-toy\selfcheck.mjs"
  *
  * 它做三件事：
  *   1) 用假 ctx 走一遍 apply()，确认 17 个工具 + /api/bili-toy 路由都注册上了

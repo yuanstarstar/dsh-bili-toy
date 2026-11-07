@@ -46,16 +46,16 @@
 
 * 收包方第一次用要自己扫码（设置页 **玩Toy** → 扫码登录），SESSDATA / bili_jct 不会跟着包走；
 * 包内**不要**带 `credential.json`、`settings.json`、`toy.log`、`login-qr.png`、`selfcheck-out.json`；
-* 打包脚本见 `D:\\plugins\\dist\`（`make-zip.ps1`），产物是 `dsh-bili-toy-<version>.zip`，解压后放进 `plugins/` 再按下面步骤装。
+* 打包脚本见 `D:\plugins\dist\`（`make-zip.ps1`），产物是 `dsh-bili-toy-<version>.zip`，解压后放进 `plugins/` 再按下面步骤装。
 
 ## 安装（本机已装好，仅作记录）
 
 ```powershell
 New-Item -ItemType Junction `
   -Path "$env:USERPROFILE\.dsh\profiles\desktop\node_modules\@local\dsh-bili-toy" `
-  -Target "D:\\plugins\\plugins\dsh-bili-toy"
+  -Target "D:\plugins\plugins\dsh-bili-toy"
 # profile 的 package.json：
-#   dependencies: "@local/dsh-bili-toy": "link:D:\\plugins\\plugins/dsh-bili-toy"
+#   dependencies: "@local/dsh-bili-toy": "link:D:/plugins/dsh-bili-toy"
 #   dsh.profile.bundles: 追加 "@local/dsh-bili-toy"
 ```
 
@@ -96,7 +96,7 @@ New-Item -ItemType Junction `
 
 ```powershell
 $env:ELECTRON_RUN_AS_NODE='1'
-& "<DSH 安装目录>\\DSH Desktop.exe" "D:\\plugins\\plugins\dsh-bili-toy\selfcheck.mjs"
+& "<DSH 安装目录>\DSH Desktop.exe" "D:\plugins\plugins\dsh-bili-toy\selfcheck.mjs"
 # 结果看 selfcheck-out.json：toolsOk / apiOk / qrOk 三个 true 就算健康
 ```
 
