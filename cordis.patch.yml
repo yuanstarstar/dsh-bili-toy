@@ -1,0 +1,7 @@
+# dsh-bili-toy 的 cordis 补丁：profile 激活这个 bundle 时把插件插进去
+# ⚠️ id 必须等于 index.js 里的 `export const name`（= bili-toy），否则设置页写不进去
+- insert:
+    - id: bili-toy
+      name: '@local/dsh-bili-toy'
+      config:
+        enabled: true

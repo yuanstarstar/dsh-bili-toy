@@ -1,0 +1,9 @@
+# 运行时与本机数据
+node_modules/
+dist/
+data/
+.tmp/
+*.log
+credential.json
+login-qr.png
+*.zip
